@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blackstone Style 量化投資看板</title>
+<style>
+  body { background:#0b0f19; color:#f1f5f9; font-family:-apple-system,BlinkMacSystemFont,sans-serif; margin:0; padding:16px; }
+  .container { max-width:820px; margin:0 auto; }
+  .header { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #1e293b; padding-bottom:12px; margin-bottom:16px; }
+  .kpi-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-bottom:16px; }
+  @media(min-width:640px){ .kpi-grid { grid-template-columns:repeat(4,1fr); } }
+  .kpi { background:#111827; border:1px solid #1f2937; border-radius:12px; padding:14px; }
+  .kpi small { color:#94a3b8; font-size:12px; }
+  .kpi .val { font-size:20px; font-weight:700; margin-top:4px; }
+  .card { background:#111827; border:1px solid #1f2937; border-radius:12px; padding:14px; margin-bottom:12px; }
+  .row-between { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+  .badge { background:#1e293b; color:#38bdf8; padding:2px 6px; border-radius:4px; font-size:12px; }
+  .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; font-size:14px; }
+  .grid-3 small { color:#94a3b8; font-size:11px; }
+  .signal-bar { margin-top:10px; padding-top:8px; border-top:1px dashed #1f2937; font-size:12px; color:#cbd5e1; }
+  .alert-box { background:rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.4); color:#fca5a5; padding:12px; border-radius:10px; font-size:13px; margin-bottom:16px; }
+  .watch-item { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid #1f2937; font-size:13px; }
+  .btn { width:100%; background:#2563eb; color:white; border:none; padding:14px; border-radius:10px; font-size:15px; font-weight:600; cursor:pointer; margin-top:8px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div><h2 style="margin:0;font-size:18px;">🏛️ 機構級量化資產評估看板</h2><small style="color:#64748b">自動更新時間 (UTC+8)：2026-11-14 17:12</small></div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi"><small>實際總資產淨值</small><div class="val">¥92,160.11</div></div>
+    <div class="kpi"><small>基金持倉市值</small><div class="val">¥17,645.25</div></div>
+    <div class="kpi"><small>累計持倉盈虧</small><div class="val" style="color:#ef4444">-7,839.89</div></div>
+    <div class="kpi"><small>距12萬目標所需回報</small><div class="val" style="color:#f59e0b">30.21%</div></div>
+  </div>
+  <div class="alert-box">
+    <b>⚠️ 機構風控示警：</b>目前三檔持倉 100% 集中於 AI 與科技賽道，波動極高。剩餘現金 <b>¥74,514.86</b> 建議分批配置下方「防禦型候選標的」以降低單一產業風險。
+  </div>
+  <h3 style="font-size:15px;color:#94a3b8;">📊 核心持倉動態與擇時信號</h3>
+  
+        <div class="card">
+            <div class="row-between">
+                <div><span class="badge">021277</span> <strong>廣發全球精選股票(QDII)C</strong></div>
+                <span style="color:#ef4444;font-weight:bold;">-0.66%</span>
+            </div>
+            <div class="grid-3">
+                <div><small>最新淨值 (2026-11-12)</small><div>5.3470</div></div>
+                <div><small>持倉市值</small><div>¥4,123.45</div></div>
+                <div><small>累計盈虧</small><div style="color:#ef4444;font-weight:bold;">-1117.97 (-21.3%)</div></div>
+            </div>
+            <div class="signal-bar">RSI(14): <b>43.3</b> ｜ 機構信號：<b>🟡 震盪持有 (嚴控倉位)</b></div>
+        </div>
+        <div class="card">
+            <div class="row-between">
+                <div><span class="badge">012733</span> <strong>易方達人工智能ETF聯接A</strong></div>
+                <span style="color:#ef4444;font-weight:bold;">-1.82%</span>
+            </div>
+            <div class="grid-3">
+                <div><small>最新淨值 (2026-11-13)</small><div>1.6354</div></div>
+                <div><small>持倉市值</small><div>¥7,177.43</div></div>
+                <div><small>累計盈虧</small><div style="color:#ef4444;font-weight:bold;">-2822.57 (-28.2%)</div></div>
+            </div>
+            <div class="signal-bar">RSI(14): <b>43.3</b> ｜ 機構信號：<b>🟡 震盪持有 (嚴控倉位)</b></div>
+        </div>
+        <div class="card">
+            <div class="row-between">
+                <div><span class="badge">020722</span> <strong>國壽安保數字經濟股票A</strong></div>
+                <span style="color:#ef4444;font-weight:bold;">-3.21%</span>
+            </div>
+            <div class="grid-3">
+                <div><small>最新淨值 (2026-11-13)</small><div>1.8405</div></div>
+                <div><small>持倉市值</small><div>¥6,344.37</div></div>
+                <div><small>累計盈虧</small><div style="color:#ef4444;font-weight:bold;">-3899.35 (-38.1%)</div></div>
+            </div>
+            <div class="signal-bar">RSI(14): <b>41.6</b> ｜ 機構信號：<b>🟡 震盪持有 (嚴控倉位)</b></div>
+        </div>
+  <h3 style="font-size:15px;color:#94a3b8;margin-top:20px;">🛡️ 7.5萬剩餘資金配置雷達（低相關性防禦標的）</h3>
+  <div class="card">
+        <div class="watch-item">
+            <div><strong>天弘中證紅利低波動100聯接A</strong> (007721)<br><small style="color:#94a3b8">高股息防禦壓艙石</small></div>
+            <div style="text-align:right">淨值 2.2174<br><span style="color:#ef4444">-0.25%</span> · RSI 48.6</div>
+        </div>
+        <div class="watch-item">
+            <div><strong>華安黃金易ETF聯接A</strong> (000216)<br><small style="color:#94a3b8">宏觀避險對沖</small></div>
+            <div style="text-align:right">淨值 2.8944<br><span style="color:#ef4444">-1.64%</span> · RSI 42.8</div>
+        </div>
+        <div class="watch-item">
+            <div><strong>易方達滬深300ETF聯接A</strong> (110020)<br><small style="color:#94a3b8">核心寬基均衡</small></div>
+            <div style="text-align:right">淨值 1.6653<br><span style="color:#ef4444">-0.66%</span> · RSI 41.0</div>
+        </div></div>
+  <button class="btn" onclick="copyForGemini()">📋 一鍵複製今日最新數據（貼給 Gemini 分析）</button>
+</div>
+<script>
+const latestData = {"updated_at": "2026-11-14 17:12", "total_capital_initial": 100000.0, "target_capital": 120000.0, "current_net_worth": 92160.11, "fund_market_value": 17645.25, "cash_remaining": 74514.86, "cumulative_pnl": -7839.89, "today_estimated_pnl": -370.86, "gap_to_120k": 27839.89, "required_return_pct": 30.21, "holdings": [{"code": "021277", "name": "廣發全球精選股票(QDII)C", "tag": "全球科技QDII", "nav": 5.347, "nav_date": "2026-11-12", "daily_pct": -0.66, "value": 4123.45, "cost": 5241.42, "pnl": -1117.97, "pnl_pct": -21.33, "rsi": 43.3, "signal": "🟡 震盪持有 (嚴控倉位)"}, {"code": "012733", "name": "易方達人工智能ETF聯接A", "tag": "A股AI算力", "nav": 1.6354, "nav_date": "2026-11-13", "daily_pct": -1.82, "value": 7177.43, "cost": 10000.0, "pnl": -2822.57, "pnl_pct": -28.23, "rsi": 43.3, "signal": "🟡 震盪持有 (嚴控倉位)"}, {"code": "020722", "name": "國壽安保數字經濟股票A", "tag": "硬科技動能", "nav": 1.8405, "nav_date": "2026-11-13", "daily_pct": -3.21, "value": 6344.37, "cost": 10243.72, "pnl": -3899.35, "pnl_pct": -38.07, "rsi": 41.6, "signal": "🟡 震盪持有 (嚴控倉位)"}], "defensive_watchlist": [{"code": "007721", "name": "天弘中證紅利低波動100聯接A", "role": "高股息防禦壓艙石", "nav": 2.2174, "daily_pct": -0.25, "rsi": 48.6}, {"code": "000216", "name": "華安黃金易ETF聯接A", "role": "宏觀避險對沖", "nav": 2.8944, "daily_pct": -1.64, "rsi": 42.8}, {"code": "110020", "name": "易方達滬深300ETF聯接A", "role": "核心寬基均衡", "nav": 1.6653, "daily_pct": -0.66, "rsi": 41.0}]};
+function copyForGemini() {
+  const prompt = "這是我今日自動更新的基金持倉與市場數據，請以專業投資經理人角度幫我評估今日變化與下一步調倉建議：\n" + JSON.stringify(latestData, null, 2);
+  navigator.clipboard.writeText(prompt).then(() => alert("✅ 已複製今日最新持倉數據！請切換到 Gemini 貼上即可。"));
+}
+</script>
+</body>
+</html>

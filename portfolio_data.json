@@ -1,0 +1,82 @@
+{
+  "updated_at": "2026-11-14 17:12",
+  "total_capital_initial": 100000.0,
+  "target_capital": 120000.0,
+  "current_net_worth": 92160.11,
+  "fund_market_value": 17645.25,
+  "cash_remaining": 74514.86,
+  "cumulative_pnl": -7839.89,
+  "today_estimated_pnl": -370.86,
+  "gap_to_120k": 27839.89,
+  "required_return_pct": 30.21,
+  "holdings": [
+    {
+      "code": "021277",
+      "name": "廣發全球精選股票(QDII)C",
+      "tag": "全球科技QDII",
+      "nav": 5.347,
+      "nav_date": "2026-11-12",
+      "daily_pct": -0.66,
+      "value": 4123.45,
+      "cost": 5241.42,
+      "pnl": -1117.97,
+      "pnl_pct": -21.33,
+      "rsi": 43.3,
+      "signal": "🟡 震盪持有 (嚴控倉位)"
+    },
+    {
+      "code": "012733",
+      "name": "易方達人工智能ETF聯接A",
+      "tag": "A股AI算力",
+      "nav": 1.6354,
+      "nav_date": "2026-11-13",
+      "daily_pct": -1.82,
+      "value": 7177.43,
+      "cost": 10000.0,
+      "pnl": -2822.57,
+      "pnl_pct": -28.23,
+      "rsi": 43.3,
+      "signal": "🟡 震盪持有 (嚴控倉位)"
+    },
+    {
+      "code": "020722",
+      "name": "國壽安保數字經濟股票A",
+      "tag": "硬科技動能",
+      "nav": 1.8405,
+      "nav_date": "2026-11-13",
+      "daily_pct": -3.21,
+      "value": 6344.37,
+      "cost": 10243.72,
+      "pnl": -3899.35,
+      "pnl_pct": -38.07,
+      "rsi": 41.6,
+      "signal": "🟡 震盪持有 (嚴控倉位)"
+    }
+  ],
+  "defensive_watchlist": [
+    {
+      "code": "007721",
+      "name": "天弘中證紅利低波動100聯接A",
+      "role": "高股息防禦壓艙石",
+      "nav": 2.2174,
+      "daily_pct": -0.25,
+      "rsi": 48.6
+    },
+    {
+      "code": "000216",
+      "name": "華安黃金易ETF聯接A",
+      "role": "宏觀避險對沖",
+      "nav": 2.8944,
+      "daily_pct": -1.64,
+      "rsi": 42.8
+    },
+    {
+      "code": "110020",
+      "name": "易方達滬深300ETF聯接A",
+      "role": "核心寬基均衡",
+      "nav": 1.6653,
+      "daily_pct": -0.66,
+      "rsi": 41.0
+    }
+  ]
+}
