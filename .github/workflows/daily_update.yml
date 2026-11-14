@@ -1,0 +1,33 @@
+name: Daily Fund Dashboard Update
+
+on:
+  schedule:
+    # 每天 UTC 14:30 (即北京/新加坡時間 22:30) 週一至週五自動執行
+    - cron: '30 14 * * 1-5'
+  workflow_dispatch: # 允許隨時在 iPad 上手動一鍵觸發更新
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run portfolio updater
+        run: python update.py
+
+      - name: Commit and push updated dashboard
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add portfolio_data.json index.html
+          git commit -m "Auto-update daily fund NAV and dashboard" || exit 0
+          git push
